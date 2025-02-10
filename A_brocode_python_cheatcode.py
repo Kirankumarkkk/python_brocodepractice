@@ -45,7 +45,13 @@ print(a,b,c)     #print tuple assignment a,b,c= 1,2,3
 a,b=b,a          #swapping tuple assignment values
 print(a,b)       #print swapped tuple
 print(len(my_dict))  #length of dict
-print(my_dict['city1'])
+print(my_dict['city1']) #to find the key value 
 print(my_dict1)
-
-        
+my_dict['city4']=444  #to add key value pair to dict
+print(my_dict)
+my_dict['city4']=666  #to update key value pair in the dict
+print(my_dict)
+del my_dict['city4']  #to delete key value pair in the dict
+print(my_dict)
+my_dict.clear()       #to delete all the key pairs in the dict
+print(my_dict)       
