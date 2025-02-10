@@ -10,6 +10,8 @@ my_nestedlist=[1,[10,20,30],['a','b','c'],4]  #nested list
 my_tuples=('a','b,','c','d','e','f')      #tuples
 my_tuples1=([1,2,3],(4,5,6))       #nested tuples
 a,b,c=1,2,3           #tuple assignment
+my_dict={'city1':111,'city2':222,'city3':333} #dictionaries dict
+my_dict1={(1,2):'start',(3,4):'stop'}     #tuple in dict
 height_datatype=type(height)  #datatype
 print(name+" "+str(age)+" "+str(height)) #print
 print(name+" hello "+fullname) #print variable + variable
@@ -40,6 +42,10 @@ print(my_tuples[2:6:1]) #tuples[start:stop:step increment] fetch from those inde
 print(my_tuples.count('a')) #count the value in the tuples
 print(my_tuples.index('a'))  #index value of a is 0
 print(a,b,c)     #print tuple assignment a,b,c= 1,2,3
-
+a,b=b,a          #swapping tuple assignment values
+print(a,b)       #print swapped tuple
+print(len(my_dict))  #length of dict
+print(my_dict['city1'])
+print(my_dict1)
 
         
