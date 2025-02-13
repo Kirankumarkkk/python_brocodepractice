@@ -115,10 +115,13 @@ print("End of if statement")
 for n in range(5):
     print(n)   #printing 0 to 4
 
-for n in range(5):
+for n in range(1,5):
     print("hello "*n) #printing hello o to 5 times
     
 loop_listx=["a","b","c","d","e"]
 
 for i in range(len(loop_listx)):
     print(loop_listx[i])  #print list value 1 by 1
+    
+for i in range(2,len(loop_listx)):
+    print(loop_listx[i])  #print list value 2 by 1
