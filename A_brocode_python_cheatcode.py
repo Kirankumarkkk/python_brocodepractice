@@ -61,3 +61,16 @@ print(my_dict1.items())  #to print dict_items and key pairs
 print(my_dict1.keys())    #to print dict keys
 print(my_dict1.values())  #to print values
 my_dict1.update({(5,6):'step',(7,8):'engage'}) #update key pair values to the dict
+#operators
+print(1+1)  #add
+print(3-1)  #sub
+print(3**2) #mul
+print(6/2)  #division
+print(6//2) #removes decimal in division
+print(10 % 2 ) #modulo
+print("hello "+","+" world")  #concat of string data types
+print(5>3) #greater than
+print(3<6) #less than
+print(3>=3) #greater than or less than
+print(4==4) #comparision operator equal to
+print("hello"!="jello") #not equal to operator
