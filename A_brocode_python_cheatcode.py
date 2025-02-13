@@ -52,6 +52,12 @@ print(my_dict)
 my_dict['city4']=666  #to update key value pair in the dict
 print(my_dict)
 del my_dict['city4']  #to delete key value pair in the dict
+my_dict.pop('city3') #to remove a key value pair
+my_dict.popitem()     #to remove a last key value pair from dict
 print(my_dict)
 my_dict.clear()       #to delete all the key pairs in the dict
 print(my_dict)       
+print(my_dict1.items())  #to print dict_items and key pairs
+print(my_dict1.keys())    #to print dict keys
+print(my_dict1.values())  #to print values
+my_dict1.update({(5,6):'step',(7,8):'engage'}) #update key pair values to the dict
