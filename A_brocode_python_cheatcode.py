@@ -95,9 +95,30 @@ print( 6 not in assign_y)
 assign_message='hello hi'
 print('w' in assign_message )
 
-#if condition
+#if/elif/else condition
 
 condition_x=10
-if condition_x==10:             #if condition
+condition_y=20
+if condition_x!=10:             #if condition
     print("yes condition")
+elif condition_x > condition_y:  #elif
+    print("yes x < y")
+else:                            #else
+    print("else statement")
+print("End of if statement")
 
+#for loop range ()
+
+#for <loop_variable> in range(<start>, <stop>, <step>):
+#    <code>
+
+for n in range(5):
+    print(n)   #printing 0 to 4
+
+for n in range(5):
+    print("hello "*n) #printing hello o to 5 times
+    
+loop_listx=["a","b","c","d","e"]
+
+for i in range(len(loop_listx)):
+    print(loop_listx[i])  #print list value 1 by 1
