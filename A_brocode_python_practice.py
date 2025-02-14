@@ -135,4 +135,22 @@ for i in range(10,5,-1):
 for i in range(len(loop_listx)-1,1,-1):  
     print(loop_listx[i])   #print e to c start len(list)-1,1,-1 start stop step
     
+#iterate string,list,dict
+
+iterate_string="hello kiran"
+
+for i in iterate_string.upper():
+    print(i)           #print each character as .upper or .lower() of message string
     
+iterate_list=[100,99,98,97,96]
+
+for i in iterate_list:
+    print(i)         #print value 1 by 1 from list
+    
+iterate_dict={"a":1,"b":2,"c":3}
+
+for key in iterate_dict:
+    print(key)          #print key from dict
+
+for value in iterate_dict.values():
+    print(value)    #print values from dict
