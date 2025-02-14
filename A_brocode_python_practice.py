@@ -154,3 +154,26 @@ for key in iterate_dict:
 
 for value in iterate_dict.values():
     print(value)    #print values from dict
+    
+for key,value in iterate_dict.items():
+    print(key,value)   #print key values from dict items
+ 
+for item in iterate_dict.items():
+    print(item)      #print key values as tuples from dict   
+    
+#break
+
+break_list=[1,2,3,4,5]
+
+for i in break_list:
+    if i%2==0:
+        print("even:",i)
+        break                  #break statement used to stop the loop when if condition is met
+    else:
+        print("odd:",i)
+
+for i in break_list:
+    if i%2==0:
+        print("continue")
+        continue                  #continue statement used to skip the rest of current iteration
+    print("odd:",i)
