@@ -177,3 +177,17 @@ for i in break_list:
         print("continue")
         continue                  #continue statement used to skip the rest of current iteration
     print("odd:",i)
+    
+#zip function
+
+zip_list1=[1,2,3,4]
+zip_list2=[5,6,7,8]
+zip_list3=[9,10,11,12]
+
+for i,j,k in zip(zip_list1,zip_list2,zip_list3):  #zip combine multiple lists and print each in seq
+    print(i,j,k)              
+    
+#enumerate function
+
+for i,enum in enumerate(zip_list1):        #enumerate starts at 0 provide sequence for the list
+    print(i,enum)
