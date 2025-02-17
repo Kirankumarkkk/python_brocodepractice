@@ -233,3 +233,18 @@ while continue_xwhile < 15:
     continue_xwhile += 1
 else:
     print("All numbers were odd")  #if break found, else doesn't run in while loop
+    
+#infinite loop
+
+infinite_x=2
+
+while infinite_x<5:
+    print(infinite_x)
+    infinite_x+=2        #add break or increment to break from infinite loop
+    
+#nested loop
+
+for i in range(1,3):
+    print("=======> outerloop")
+    for j in range(2):
+        print(i,j)
