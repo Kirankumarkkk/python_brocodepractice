@@ -248,3 +248,17 @@ for i in range(1,3):
     print("=======> outerloop")
     for j in range(2):
         print(i,j)
+        
+#def function
+
+#def <function_name>(<param1>, <param2>, ...):
+#<code>
+
+def pattern(a,b,c):         #def function with params
+    defsize=4
+    print(a+b,c) 
+    print(c)
+    for i in range(defsize):
+        print("*"*defsize)
+
+pattern(1,2,"hello pattern")           #calling pattern funtion with parameter values
