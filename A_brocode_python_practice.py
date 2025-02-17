@@ -189,5 +189,47 @@ for i,j,k in zip(zip_list1,zip_list2,zip_list3):  #zip combine multiple lists an
     
 #enumerate function
 
-for i,enum in enumerate(zip_list1):        #enumerate starts at 0 provide sequence for the list
+enumerate_list=[1,2,3,4]
+
+for i,enum in enumerate(enumerate_list):        #enumerate starts at 0 provide sequence for the list
     print(i,enum)
+
+enumerate_message="hello kiran"
+
+for i,message in enumerate(enumerate_message,1):    #string variable, start counter for enumerate
+    print(i,message)                                #enumerate message char from o to end 
+    
+
+#else for loop
+
+for i in range(1,5):
+    if i==1:
+        print(i)
+        break                #for loop break statement present then else won't run, if break not present else will run
+else:
+    print("else")            #comment break then run , else will run 
+    
+#while loop
+
+while_x=1
+while_y=1
+while while_x<10:           #while loop runs as long as the condition is true 
+    print(while_x)          #similar to for loop , while have condition
+    while_x+=1
+    
+while while_y < 10:
+    if while_y % 2 == 0:
+        print("Even:", while_y)
+        break                   #break stops the while loop immediately
+    print(while_y)              #continue stops current iteration and start next iteration
+    while_y += 1
+ 
+continue_xwhile=5    
+while continue_xwhile < 15:
+    if continue_xwhile % 2 == 0:
+        continue_xwhile += 1
+        continue               #continue stops current iteration and start next iteration
+    print("Odd:", continue_xwhile)   
+    continue_xwhile += 1
+else:
+    print("All numbers were odd")  #if break found, else doesn't run in while loop
