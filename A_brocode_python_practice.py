@@ -262,3 +262,11 @@ def pattern(a,b,c):         #def function with params
         print("*"*defsize)
 
 pattern(1,2,"hello pattern")           #calling pattern funtion with parameter values
+
+def print_pattern(num_rows):
+    for i in range(num_rows):
+        for num_cols in range(num_rows-i):
+            print("*",end="")                 #print pattern *** ** *
+        print()
+
+print_pattern(3)
