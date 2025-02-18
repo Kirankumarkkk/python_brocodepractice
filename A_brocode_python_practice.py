@@ -273,13 +273,13 @@ print_pattern(3)
 
 #def return value
 
-def return_value(a,b):
+def return_value(a,b=3):      #default parameter value in function
     if a*b==6:
         return a*b                     
     else:
         return None            #based on condition and values, return none or value
 
-print(return_value(2,3))
+print(return_value(2))
 
 def return_valueseq(seq):
     for i in seq:                    
@@ -292,3 +292,13 @@ def return_valueseq(seq):
         print(i)            #passing list values and printing the values one by one
         
 return_valueseq([1,2,3,4])
+
+#try/except
+
+#try_index=int(input("enter the value:"))     #uncomment to for input 
+
+try:
+    my_list = [1, 2, 3, 4]
+    print(my_list[try_index])               #try exception with passing value index
+except:
+    print("Please enter a valid index.")
