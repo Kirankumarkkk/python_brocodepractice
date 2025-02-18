@@ -293,12 +293,39 @@ def return_valueseq(seq):
         
 return_valueseq([1,2,3,4])
 
-#try/except
+#try/except/else/finally
 
 #try_index=int(input("enter the value:"))     #uncomment to for input 
 
 try:
     my_list = [1, 2, 3, 4]
     print(my_list[try_index])               #try exception with passing value index
-except:
+except:                                     #except <exception_type> as <name>:  exception type and name
     print("Please enter a valid index.")
+else:
+    print("skipping this program")        #else will run only if there is no exception
+finally:
+    print("running finally")             #finally will run only if there is exception
+    
+#OOP's object-oriented programming 
+
+#class that acts as a blue print, general syntax below
+
+''' class <ClassName>:
+
+    <class_attribute_name> = <value>
+
+    def __init__(self,<param1>, <param2>, ...):
+        self.<attr1> = <param1>
+        self.<attr2> = <param2>
+        .
+        .
+        .
+        # As many attributes as needed
+
+   def <method_name>(self, <param1>, ...):
+       <code>
+
+   # As many methods as needed
+   
+'''
