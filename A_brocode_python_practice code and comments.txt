@@ -270,3 +270,25 @@ def print_pattern(num_rows):
         print()
 
 print_pattern(3)
+
+#def return value
+
+def return_value(a,b):
+    if a*b==6:
+        return a*b                     
+    else:
+        return None            #based on condition and values, return none or value
+
+print(return_value(2,3))
+
+def return_valueseq(seq):
+    for i in seq:                    
+        return i            #passing list values and printing first value
+        
+print(return_valueseq([1,2,3,4]))
+
+def return_valueseq(seq):
+    for i in seq:                    
+        print(i)            #passing list values and printing the values one by one
+        
+return_valueseq([1,2,3,4])
