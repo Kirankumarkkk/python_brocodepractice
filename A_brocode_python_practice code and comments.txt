@@ -311,12 +311,12 @@ finally:
 
 #class that acts as a blue print, general syntax below
 
-''' class <ClassName>:
+''' class <ClassName>:                     #class name
 
     <class_attribute_name> = <value>
 
-    def __init__(self,<param1>, <param2>, ...):
-        self.<attr1> = <param1>
+    def __init__(self,<param1>, <param2>, ...):     #declaring attributes in __init__
+        self.<attr1> = <param1>                     #objects will have attributes that we define in the class
         self.<attr2> = <param2>
         .
         .
@@ -329,3 +329,25 @@ finally:
    # As many methods as needed
    
 '''
+
+class Dog:                                     #dog class with init method
+
+    def __init__(apple, name, age=10):          #default arguments also we can pass
+        apple.name = name
+        apple.age = age
+                                 #some class doesn't need argurment, in that case, it will be empty
+my_dog = Dog("Nora", 11)         #instance to call class with values(arguments) to attributes
+
+print(my_dog.name,my_dog.age)    #to fetch instance attribute values
+
+my_dog.name="Norita"             #update instance attribute
+
+print(my_dog.name,my_dog.age)    #printing updated instance attribute
+
+#del my_dog.name             #delete instance attribute and if we try to fetch, it will throw error   
+
+print(my_dog.name,my_dog.age)
+
+#del my_dog                   #delete instance and it will throw error if we try to fetch
+
+print(my_dog.name)
