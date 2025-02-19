@@ -411,10 +411,11 @@ print(my_dog2.name)          #getter
 del my_dog2.name             #deleter
 
 #to open the file and read
-
+'''
 with open("famous_quotes.txt","r") as file:
-    for line in file:
+    for line in file:                            #uncomment and test
         print(line)
+'''
         
 #create new file and update the content fully in file 
 
@@ -428,7 +429,18 @@ with open("famous_quotes.txt", "w") as file:
 
 words = ["Amazing", "Green", "Python", "Code","new line 2"]
 
+'''
 with open("famous_quotes.txt", "a") as file:
-    for word in words:
+    for word in words:                           #uncomment and test this code
         file.write(word + "\n")
-        
+'''
+
+#delete a file 
+
+import os
+
+if os.path.exists("famous_quotes1.txt"):          #file path and file with extension
+  os.remove("famous_quotes1.txt")
+  print("file is deleted")
+else:
+  print("This file doesn't exist")
