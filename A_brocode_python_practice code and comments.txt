@@ -331,23 +331,33 @@ finally:
 '''
 
 class Dog:                                     #dog class with init method
+    
+    # Class attributes
+    kingdom = "Animalia"
+    species = "Canis lupus"
 
     def __init__(apple, name, age=10):          #default arguments also we can pass
-        apple.name = name
-        apple.age = age
+        apple.name = name        #public attribute       
+        apple._age = age         #non-public attributes
+        
                                  #some class doesn't need argurment, in that case, it will be empty
 my_dog = Dog("Nora", 11)         #instance to call class with values(arguments) to attributes
 
-print(my_dog.name,my_dog.age)    #to fetch instance attribute values
+print(my_dog.name,my_dog._age)    #to fetch instance attribute values
 
 my_dog.name="Norita"             #update instance attribute
 
-print(my_dog.name,my_dog.age)    #printing updated instance attribute
+print(my_dog.name,my_dog._age)    #printing updated instance attribute
 
 #del my_dog.name             #delete instance attribute and if we try to fetch, it will throw error   
 
-print(my_dog.name,my_dog.age)
+print(my_dog.name,my_dog._age)
 
 #del my_dog                   #delete instance and it will throw error if we try to fetch
 
-print(my_dog.name)
+print(my_dog.name)           #print instance attribute value
+
+print(Dog.kingdom)           #print class attribute values
+print(Dog.species)
+
+
