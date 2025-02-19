@@ -409,3 +409,26 @@ my_dog2.name="doodle"        #setter
 print(my_dog2.name)          #getter
 
 del my_dog2.name             #deleter
+
+#to open the file and read
+
+with open("famous_quotes.txt","r") as file:
+    for line in file:
+        print(line)
+        
+#create new file and update the content fully in file 
+
+words = ["Amazing", "Green", "Python", "Code","new line 1"]
+
+with open("famous_quotes.txt", "w") as file:
+    for word in words:
+        file.write(word + "\n")
+        
+#create new file and append to the existing content , add to exisiting content in the file
+
+words = ["Amazing", "Green", "Python", "Code","new line 2"]
+
+with open("famous_quotes.txt", "a") as file:
+    for word in words:
+        file.write(word + "\n")
+        
