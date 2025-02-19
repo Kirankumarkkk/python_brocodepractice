@@ -339,9 +339,41 @@ class Dog:                                     #dog class with init method
     def __init__(apple, name, age=10):          #default arguments also we can pass
         apple.name = name        #public attribute       
         apple._age = age         #non-public attributes
+        apple.speed= 50
+        
+    def bark(apple):                              #bark method creation
+        print(f"woof-woof. I'm {apple.name}")
+        
+    def increment_speed(apple, value):         #increment method
+        apple.speed += value
+        
+    @property                    #in python, we use properties for getter and setter
+    def name(apple):
+        print("calling getter")
+        return apple._name
+
+    @name.setter
+    def name(apple, new_name):
+        print("calling setter")
+        apple._name = new_name
+
+    @name.deleter
+    def name(apple):
+        print("calling deleter")
+        del apple._name
         
                                  #some class doesn't need argurment, in that case, it will be empty
 my_dog = Dog("Nora", 11)         #instance to call class with values(arguments) to attributes
+
+my_dog.bark()                   #calling method after creating instance
+
+my_dog1=Dog("kiddy")            #creating another instance dog1
+
+print(my_dog1.name)             #checking name and speed values
+print(my_dog1.speed)
+my_dog1.increment_speed(5)      #incrementing the speed and value with method
+print(my_dog1.speed)            #print updated value
+
 
 print(my_dog.name,my_dog._age)    #to fetch instance attribute values
 
@@ -357,7 +389,23 @@ print(my_dog.name,my_dog._age)
 
 print(my_dog.name)           #print instance attribute value
 
-print(Dog.kingdom)           #print class attribute values
-print(Dog.species)
+print(Dog.species)           #print class attribute values
+print(Dog.kingdom)
 
+Dog.kingdom="New kingdom"   #updating class attribute and printing
 
+print(Dog.kingdom)
+
+#del Dog.kingdom             #delete class attribute
+
+print(Dog.kingdom)           #uncomment above line for delete class attribute
+
+my_dog2=Dog("Bubble")        #creating instance for properties setter
+
+print(my_dog2.name)        
+
+my_dog2.name="doodle"        #setter
+
+print(my_dog2.name)          #getter
+
+del my_dog2.name             #deleter
