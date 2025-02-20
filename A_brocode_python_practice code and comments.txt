@@ -606,3 +606,74 @@ class Demo:
 
 obj = Demo()
 del obj  # Explicitly calling the destructor
+
+#class  ------------------------------------------------------------------------------------------------
+#A class is like a template for making objects in programming. It outlines what properties (called attributes) and actions (called methods) the objects will have. Think of a class as a recipe that tells you how to create something, like a car.
+
+class Car:
+    def __init__(self, make, model):
+        self.make = make  # The brand of the car, like IVM
+        self.model = model  # The specific model, like Ikenga
+
+    def display_info(self):
+        return f"Car: {self.make}, Model: {self.model}"  # Shows the car's information
+
+#An object is a specific example of a class. Think of it like a real-life item that has certain characteristics defined by the class. When you create an object, you're giving it actual values for its properties.
+
+my_car = Car("IVM", "Ikenga")
+print(my_car.display_info())  # This will show: Car: IVM, Model: Ikenga    
+
+
+#Static method ---------------------------------------------------------------------------
+#This is a method that belongs to a class, not to an instance (object) of that class. Unlike other methods, static methods don’t need access to instance-specific data (attributes) or class-specific data.
+#You can call a static method directly from the class without creating an object.
+
+class MathOperations:    #eg1
+    @staticmethod  # This tells Python it's a static method
+    def add(a, b):
+        return a + b
+
+# We don't need to create an object of the class to use the static method
+result = MathOperations.add(5, 3)
+print(result)  # Output: 8
+
+class MathOperations1:    #eg2
+    @staticmethod  # This tells Python it's a static method
+    def minus(a, b):
+        return a - b
+
+# We don't need to create an object of the class to use the static method
+result = MathOperations1.minus(10,5)
+print(result)  # Output: 8
+
+#Difference Between a Class Variable and an Instance Variable?
+#A class variable is shared among all instances of a class, while an instance variable is specific to each object and defined inside methods, usually within the constructor.
+
+class MyClass:
+    class_var = "I am a class variable"
+
+    def __init__(self, instance_var):
+        self.instance_var = instance_var  # Instance variable
+    
+#multiple inheritance ---------------------------------------------------------------------------
+#Python allows multiple inheritance, where a class can inherit from more than one parent class.
+
+class Parent1:
+    def display(self):
+        print("Parent1")
+
+class Parent2:
+    def display(self):
+        print("Parent2")
+
+class Child(Parent1, Parent2):
+    pass
+
+child = Child()
+child.display()  # Method resolution order determines which display() is called
+
+#Difference Between an Abstract Class and an Interface? ----------------------------------------
+#An abstract class is a special type of class that you cannot create an object from. It can have both incomplete methods (called abstract methods) that don’t have any implementation, as well as fully implemented methods that do have code.
+#An interface is like a contract that defines methods that must be implemented by any class that uses it. In Python, we achieve interfaces through abstract base classes (ABCs), which only contain abstract methods. They don’t have any implementation.
+
+
