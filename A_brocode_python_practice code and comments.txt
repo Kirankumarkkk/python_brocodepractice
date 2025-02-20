@@ -457,8 +457,43 @@ print(sqrt(36))
 
 '''
 The four pillars of OOP are:
-Encapsulation
-Abstraction
+Encapsulation: Focuses on bundling data and restricting access.
+Abstraction: Focuses on hiding complexity and exposing only necessary details.
 Inheritance
 Polymorphism
 '''
+
+#encapsulation example 
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age  # Private attribute (notice the double underscore)
+
+    def get_age(self):
+        return self.__age  # A method to access the private age attribute
+
+my_person=Person("Kiddy",28)
+print(my_person.name)
+
+print(my_person.get_age())  #age kept privat so, can only get using get_age() method
+
+#Abstraction
+
+class Car:
+    def start_engine(self):
+        print("Engine started")
+
+    def drive(self):
+        print("Car is driving")
+        
+    def stop(self):
+        print("Car is stopping")
+
+# The user interacts with the car without knowing how the engine works
+my_car = Car()
+my_car.start_engine()
+my_car.drive()
+my_car.stop()
+
+#inheritance
