@@ -459,11 +459,12 @@ print(sqrt(36))
 The four pillars of OOP are:
 Encapsulation: Focuses on bundling data and restricting access.
 Abstraction: Focuses on hiding complexity and exposing only necessary details.
-Inheritance
-Polymorphism
+Inheritance :  Car inherits the brand and start() method from Vehicle, but it also has its own attribute (model) and method (display_info()).
+Polymorphism : Polymorphism allows different types of objects to respond to the same action in their own unique way
+
 '''
 
-#encapsulation example 
+#encapsulation example -----------------------------------------
 
 class Person:
     def __init__(self, name, age):
@@ -478,7 +479,7 @@ print(my_person.name)
 
 print(my_person.get_age())  #age kept privat so, can only get using get_age() method
 
-#Abstraction
+#Abstraction  example -----------------------------------------
 
 class Car:
     def start_engine(self):
@@ -496,4 +497,51 @@ my_car.start_engine()
 my_car.drive()
 my_car.stop()
 
-#inheritance
+#inheritance  example -----------------------------------------
+
+# Parent class
+class Vehicle:
+    def __init__(self, brand):
+        self.brand = brand  # This is an attribute (brand)
+
+    def start(self):
+        print(f"{self.brand} vehicle started")  # This is a method
+
+# Child class that inherits from Vehicle
+class Car(Vehicle):
+    def __init__(self, brand, model):
+        super().__init__(brand)  # Inherit the brand from Vehicle (parent class)
+        self.model = model  # Add a new attribute specific to Car
+
+    def display_info(self):
+        print(f"Car: {self.brand}, Model: {self.model}")
+
+# Creating an object of the Car class
+my_car = Car("IVM", "Ikenga")
+my_car.start()  # Output: IVM vehicle started
+my_car.display_info()  # Output: Car: IVM, Model: Ikenga
+
+#Polymorphism example -----------------------------------------
+
+# Parent class
+class Animal:
+    def sound(self):
+        return "Some generic animal sound"
+
+# Child class Dog overriding the sound method
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
+
+# Child class Cat overriding the sound method
+class Cat(Animal):
+    def sound(self):
+        return "Meow"
+
+# Creating instances of each class
+my_dog = Dog()
+my_cat = Cat()
+
+# Calling the sound method
+print(my_dog.sound())  # Output: Bark
+print(my_cat.sound())  # Output: Meow
