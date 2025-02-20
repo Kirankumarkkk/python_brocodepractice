@@ -444,3 +444,14 @@ if os.path.exists("famous_quotes1.txt"):          #file path and file with exten
   print("file is deleted")
 else:
   print("This file doesn't exist")
+  
+
+import math
+import math as m
+from math import sqrt
+from math import sqrt as square_root
+from math import *                   #import all elements of module
+
+print(m.sqrt(25))
+print(sqrt(36))
+
