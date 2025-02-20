@@ -545,3 +545,64 @@ my_cat = Cat()
 # Calling the sound method
 print(my_dog.sound())  # Output: Bark
 print(my_cat.sound())  # Output: Meow
+
+
+#method overloading -----------------------------------------------------------------
+
+#Method overloading happens when you create multiple methods with the same name, but with different types of parameters inside the same class.
+
+#eg 1 --------------------------------------------------------------------------------
+
+class Calculator:
+    def add(self, a, b=0, c=0):
+        return a + b + c
+
+# Create an instance of Calculator
+calc = Calculator()
+
+# Call the add method with different numbers of arguments
+print(calc.add(5))        # Output: 5 (a = 5, b and c default to 0)
+print(calc.add(5, 10))    # Output: 15 (a = 5, b = 10, c default to 0)
+print(calc.add(5, 10, 15))# Output: 30 (a = 5, b = 10, c = 15)
+
+#eg 2 -------------------------------------------------------------------------------
+
+class Calculator:
+    def add(self, *args):
+        return sum(args)
+
+# Create an instance of Calculator
+calc = Calculator()
+
+# Call the add method with different numbers of arguments
+print(calc.add(5))           # Output: 5 (adds just one number)
+print(calc.add(5, 10))       # Output: 15 (adds two numbers)
+print(calc.add(5, 10, 15))   # Output: 30 (adds three numbers)
+
+# Constructor __init__ initialise
+# A constructor is a special method that automatically runs when you create a new object from a class. It helps to set up the object's initial values (like setting the name or age of a person).
+
+class Student:
+    def __init__(self, name, grade):  # The constructor method
+        self.name = name  # Setting the name when the object is created
+        self.grade = grade  # Setting the grade when the object is created
+
+# Creating a new Student object
+student1 = Student("Alice", "A")
+
+# Accessing the student's details
+print(student1.name)  # Output: Alice
+print(student1.grade)  # Output: A
+
+#destructor __del__ del object ------------------------------------------------------------------------------------
+#A destructor is a method that is called when an object is destroyed. In Python, the destructor is defined using __del__.
+
+class Demo:
+    def __init__(self):
+        print("Constructor called")
+
+    def __del__(self):
+        print("Destructor called")
+
+obj = Demo()
+del obj  # Explicitly calling the destructor
