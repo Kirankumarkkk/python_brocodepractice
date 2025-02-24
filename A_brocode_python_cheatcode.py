@@ -322,6 +322,34 @@ zipped = zip(names, scores,height)
 zipped_list = list(zipped)
 print(zipped_list)
 
+#if lists are uneven it ignore the extra values
+
+# Lists of different lengths
+fruits = ["apple", "banana"]
+prices = [100, 200, 150]
+
+# Zipping them together
+result = list(zip(fruits, prices))
+print(result)
+
+#unzipping list 
+
+# Zipped lists
+cities = ["New York", "London", "Tokyo"]
+populations = [8000000, 9000000, 14000000]
+
+zipped = zip(cities, populations)
+
+# Unzipping them
+unzipped_cities, unzipped_populations = zip(*zipped)
+
+print(unzipped_cities)
+print(unzipped_populations)
+
+
+
+#==================================================================================================
+
     
 #OOP's object-oriented programming 
 
