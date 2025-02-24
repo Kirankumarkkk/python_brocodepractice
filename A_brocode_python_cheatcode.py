@@ -346,6 +346,26 @@ unzipped_cities, unzipped_populations = zip(*zipped)
 print(unzipped_cities)
 print(unzipped_populations)
 
+# Zipping two strings
+str1 = "ABC"
+str2 = "123"
+
+# Zipping the characters together
+zipped_strings = list(zip(str1, str2))
+print(zipped_strings)
+
+# Two dictionaries
+dict1 = {'name': 'Alice', 'age': 25}
+dict2 = {"name": "Bob", "age": 30}
+
+# Zipping dictionary keys
+zipped_keys = list(zip(dict1, dict2))
+print(zipped_keys)
+
+#zipping with values
+zipped_values = list(zip(dict1.values(), dict2.values()))
+print(zipped_values)
+
 
 
 #==================================================================================================
