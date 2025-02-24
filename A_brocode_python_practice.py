@@ -676,4 +676,31 @@ child.display()  # Method resolution order determines which display() is called
 #An abstract class is a special type of class that you cannot create an object from. It can have both incomplete methods (called abstract methods) that don’t have any implementation, as well as fully implemented methods that do have code.
 #An interface is like a contract that defines methods that must be implemented by any class that uses it. In Python, we achieve interfaces through abstract base classes (ABCs), which only contain abstract methods. They don’t have any implementation.
 
+from abc import ABC, abstractmethod
 
+# Abstract Class
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass  # This is an abstract method, no implementation
+
+    def sleep(self):
+        return "Sleeping..."  # This is a regular method with implementation
+
+# Subclass that implements the abstract method
+class Dog(Animal):
+    def sound(self):
+        return "Bark"  # Implementation of the abstract method
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow"  # Another implementation of the abstract method
+
+# Using the classes
+my_dog = Dog()
+print(my_dog.sound())  # Output: Bark
+print(my_dog.sleep())  # Output: Sleeping...
+
+my_cat = Cat()
+print(my_cat.sound())  # Output: Meow
+print(my_cat.sleep())  # Output: Sleeping...
