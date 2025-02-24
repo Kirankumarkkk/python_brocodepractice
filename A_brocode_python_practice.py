@@ -307,6 +307,22 @@ else:
 finally:
     print("running finally")             #finally will run only if there is exception
     
+    
+#zip function
+
+# Two lists to combine
+names = ["Alice", "Bob", "Charlie"]
+scores = [85, 90, 88]
+height = [5.6,6.1,5.4]
+
+# Using zip() to combine them
+zipped = zip(names, scores,height)
+
+# Convert the result to a list so we can see it
+zipped_list = list(zipped)
+print(zipped_list)
+
+    
 #OOP's object-oriented programming 
 
 #class that acts as a blue print, general syntax below
