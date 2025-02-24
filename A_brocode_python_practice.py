@@ -366,7 +366,15 @@ print(zipped_keys)
 zipped_values = list(zip(dict1.values(), dict2.values()))
 print(zipped_values)
 
+#using zip in loops
 
+# Lists of names and scores
+names = ["Alice", "Bob", "Charlie"]
+scores = [85, 90, 88]
+
+# Using zip() in a loop
+for name, score in zip(names, scores):
+    print(f"{name} scored {score}")
 
 #==================================================================================================
 
