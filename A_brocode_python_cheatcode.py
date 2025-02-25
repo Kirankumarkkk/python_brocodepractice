@@ -429,6 +429,20 @@ def display():
 decorated_display = decorator_function(display)
 decorated_display()  # Outputs: The display function was called
 
+#syntax for decorator
+
+def decorator_function(func):
+    def wrapper_function():
+        print(f'Wrapper executed before {func.__name__}')
+        return func()
+    return wrapper_function
+
+@decorator_function
+def display():
+    print('The display function was called')
+
+display()  # Outputs: Wrapper executed before display
+           #          The display function was called
 
 
 #==================================================================================================
