@@ -443,7 +443,38 @@ def display():
 
 display()  # Outputs: Wrapper executed before display
            #          The display function was called
+           
 
+#Modifying the Decorator to Handle Arguments
+
+#The decorator we've written so far won't work if our original function takes arguments.
+
+def display_info(name, age):
+    print('display_info was called with ({}, {})'.format(name, age))
+
+display_info('Kalam', 83)  # Outputs: display_info was called with (Kalam, 83)
+
+#Decorator to Handle Arguments
+
+import functools
+
+def decoratorFunction(func):
+    @functools.wraps(func)
+    def wrapperFunction(*args, **kwargs):
+        print('Wrapper executed before {}'.format(func.__name__))
+        return func(*args, **kwargs)
+    return wrapperFunction
+
+@decoratorFunction
+def display():
+    print('The display function was called')
+
+@decoratorFunction
+def display_info(name, age):
+    print('display_info was called with ({}, {})'.format(name, age))
+
+display_info('Kalam', 83)  
+display()
 
 #==================================================================================================
 
