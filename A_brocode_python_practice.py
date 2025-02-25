@@ -375,6 +375,37 @@ scores = [85, 90, 88]
 # Using zip() in a loop
 for name, score in zip(names, scores):
     print(f"{name} scored {score}")
+    
+
+#First-Class Functions in Python
+#First-class functions mean that functions in Python are treated like any other object. 
+
+def outer_func():
+    greet = "Hello!"
+
+    def inner_func():
+        print(greet)
+
+    return inner_func
+
+new_function = outer_func()
+new_function()  # Outputs: Hello!
+new_function()  # Outputs: Hello!
+
+#Modifying Closures with Parameters
+
+def outer_func(greet):
+    def inner_func():
+        print(greet)
+    return inner_func
+
+namaste_func = outer_func("Namaste!")
+howdy_func = outer_func("Howdy!")
+
+namaste_func()  # Outputs: Namaste!
+howdy_func()    # Outputs: Howdy!
+
+
 
 #==================================================================================================
 
