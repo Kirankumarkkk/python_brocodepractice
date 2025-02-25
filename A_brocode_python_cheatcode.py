@@ -405,6 +405,30 @@ howdy_func = outer_func("Howdy!")
 namaste_func()  # Outputs: Namaste!
 howdy_func()    # Outputs: Howdy!
 
+#decorator
+#A decorator is a function that takes another function as an argument, adds some functionality, and returns a new function. This allows you to "wrap" another function to extend its behavior (adding some functionality before or after) without modifying the original function's source code.
+
+def outer_func(greet):
+    def inner_func():
+        print(greet)
+    return inner_func
+
+def decorator_function(func):
+    def wrapper_function():
+        return func()
+    return wrapper_function
+
+def decorator_function(func):
+    def wrapper_function():
+        return func()
+    return wrapper_function
+
+def display():
+    print('The display function was called')
+
+decorated_display = decorator_function(display)
+decorated_display()  # Outputs: The display function was called
+
 
 
 #==================================================================================================
