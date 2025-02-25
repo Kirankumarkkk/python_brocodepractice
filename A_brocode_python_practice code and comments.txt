@@ -476,6 +476,39 @@ def display_info(name, age):
 display_info('Kalam', 83)  
 display()
 
+#Original Function-Based Decorator
+
+def decoratorFunction(func):
+    def wrapperFunction(*args, **kwargs):
+        print('Wrapper executed before calling {}'.format(func.__name__))
+        return func(*args, **kwargs)
+    return wrapperFunction
+
+#Creating a Class-Based Decorator
+
+class DecoratorClass:
+    def __init__(self, func):
+        self.func = func
+
+    def __call__(self, *args, **kwargs):
+        print('Executing wrapper before {}'.format(self.func.__name__))
+        return self.func(*args, **kwargs)
+
+#Using the Class-Based Decorator
+
+@DecoratorClass
+def display():
+    print('display function executed')
+
+@DecoratorClass
+def display_info(name, age):
+    print('display_info function executed with arguments ({}, {})'.format(name, age))
+
+#Running the Decorated Functions
+
+display_info('Kalam', 83)
+display()
+
 #==================================================================================================
 
     
